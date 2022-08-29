@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_marginHorizontal="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/bg_wihte_round_10"
+    android:elevation="1dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="BTCUSDT"
+        android:textColor="#ff1a1a1a"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/bg_down_round_5"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_40"
+        android:text="做空"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="类型:"
+        android:textColor="#ff707070"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/weight_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="级别:"
+        android:textColor="#ff707070"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/type_title"
+        app:layout_constraintTop_toBottomOf="@+id/type_title" />
+
+    <TextView
+        android:id="@+id/money_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="止盈:"
+        android:textColor="#ff707070"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/type_title"
+        app:layout_constraintStart_toStartOf="@+id/direction"
+        app:layout_constraintTop_toTopOf="@+id/type_title" />
+
+    <TextView
+        android:id="@+id/out_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="止损:"
+        android:textColor="#ff707070"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/weight_title"
+        app:layout_constraintStart_toStartOf="@+id/money_title"
+        app:layout_constraintTop_toTopOf="@+id/weight_title" />
+
+    <TextView
+        android:id="@+id/type_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="谐波"
+        android:textColor="#1a1a1a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/type_title"
+        app:layout_constraintStart_toEndOf="@+id/type_title"
+        app:layout_constraintTop_toTopOf="@+id/type_title" />
+
+    <TextView
+        android:id="@+id/weight_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="4小时"
+        android:textColor="#1a1a1a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/weight_title"
+        app:layout_constraintStart_toStartOf="@+id/type_content"
+        app:layout_constraintTop_toBottomOf="@+id/type_title" />
+
+    <TextView
+        android:id="@+id/money_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="$18666"
+        android:textColor="#1a1a1a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/money_title"
+        app:layout_constraintStart_toEndOf="@+id/money_title"
+        app:layout_constraintTop_toTopOf="@+id/money_title" />
+
+    <TextView
+        android:id="@+id/out_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$21000"
+        android:textColor="#1a1a1a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/out_title"
+        app:layout_constraintStart_toStartOf="@+id/money_price"
+        app:layout_constraintTop_toTopOf="@+id/out_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="创建时间:2022-08-03 19:14"
+        android:textColor="#cccccc"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/direction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/direction" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$20890.1"
+        android:textColor="#f15a6d"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

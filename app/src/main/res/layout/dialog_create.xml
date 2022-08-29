@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="25dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="创建警报"
+        android:textColor="#1a1a1a"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+
+        android:id="@+id/textFieldBoxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        app:alwaysShowHint="true"
+        app:hasClearButton="true"
+        app:labelText="交易对"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:primaryColor="@color/theme_color"
+        app:secondaryColor="@color/theme_color"
+        app:useDenseSpacing="true">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/usdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="BTCUSDT"
+            android:inputType="textCapWords" />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+
+        android:id="@+id/textFieldBoxes2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        app:alwaysShowHint="true"
+        app:hasClearButton="true"
+        app:labelText="价格"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldBoxes"
+
+        app:primaryColor="@color/theme_color"
+        app:secondaryColor="@color/theme_color"
+        app:useDenseSpacing="true">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            app:prefix="$ "
+            app:prefixTextColor="@color/theme_color" />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+
+        android:id="@+id/textFieldBoxes3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        app:alwaysShowHint="true"
+        app:hasClearButton="true"
+        app:labelText="止盈"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldBoxes2"
+        app:layout_constraintWidth_percent="0.43"
+        app:primaryColor="@color/theme_color"
+        app:secondaryColor="@color/theme_color"
+        app:useDenseSpacing="true">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/money_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            app:prefix="$ "
+            app:prefixTextColor="@color/theme_color" />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:alwaysShowHint="true"
+        app:hasClearButton="true"
+        app:labelText="止损"
+        app:layout_constraintBottom_toBottomOf="@+id/textFieldBoxes3"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldBoxes2"
+        app:layout_constraintTop_toTopOf="@+id/textFieldBoxes3"
+        app:layout_constraintWidth_percent="0.43"
+        app:primaryColor="@color/theme_color"
+        app:secondaryColor="@color/theme_color"
+        app:useDenseSpacing="true">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/stop_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            app:prefix="$ "
+            app:prefixTextColor="@color/theme_color" />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldBoxes3"
+        tools:layout_editor_absoluteX="15dp">
+
+        <TextView
+            android:id="@+id/type_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="策略类型"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/labels"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.donkingliang.labels.LabelsView
+            android:id="@+id/labels"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:isIndicator="false"
+            app:labelBackground="@drawable/label_bg"
+            app:labelTextColor="@drawable/lab_text_color"
+            app:labelTextPaddingBottom="5dp"
+            app:labelTextPaddingLeft="10dp"
+            app:labelTextPaddingRight="10dp"
+            app:labelTextPaddingTop="5dp"
+            app:labelTextSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/type_do"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lineMargin="10dp"
+            app:maxColumns="5"
+            app:maxLines="1"
+            app:selectType="SINGLE"
+            app:wordMargin="10dp" />
+        <TextView
+            android:id="@+id/data_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="级别"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labels" />
+
+        <com.donkingliang.labels.LabelsView
+            android:id="@+id/time_labs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:isIndicator="false"
+            app:labelBackground="@drawable/label_bg"
+            app:labelTextColor="@drawable/lab_text_color"
+            app:labelTextPaddingBottom="5dp"
+            app:labelTextPaddingLeft="10dp"
+            app:labelTextPaddingRight="10dp"
+            app:labelTextPaddingTop="5dp"
+            app:labelTextSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/data_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/direction"
+            app:layout_constraintTop_toTopOf="@+id/data_type"
+            app:lineMargin="10dp"
+            app:maxColumns="5"
+            app:maxLines="1"
+            app:selectType="SINGLE"
+            app:wordMargin="10dp" />
+
+        <TextView
+            android:id="@+id/direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="方向"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_labs" />
+
+        <com.donkingliang.labels.LabelsView
+            android:id="@+id/direction_labs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:isIndicator="false"
+            app:labelBackground="@drawable/label_bg"
+            app:labelTextColor="@drawable/lab_text_color"
+            app:labelTextPaddingBottom="5dp"
+            app:labelTextPaddingLeft="10dp"
+            app:labelTextPaddingRight="10dp"
+            app:labelTextPaddingTop="5dp"
+            app:labelTextSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/direction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/direction"
+            app:layout_constraintTop_toTopOf="@+id/direction"
+            app:lineMargin="10dp"
+            app:maxColumns="5"
+            app:maxLines="1"
+            app:selectType="SINGLE"
+            app:wordMargin="10dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_round_10"
+        android:text="确认"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        tools:layout_editor_absoluteX="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
